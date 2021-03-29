@@ -1,0 +1,214 @@
+// COMMON
+.sidebar {
+
+    width: $base * 86;
+    height: 884px;
+    background-size: cover;
+}
+
+.sidebar-outer {
+    margin: $base * 7;
+}
+
+.sidebar-inner {
+    padding-top: $base * 10;
+    padding-bottom: $base * 8;
+}
+
+.sidebar-header {
+    padding-bottom: $base * 10;
+}
+
+.logo {
+    @include dmsans($fw-bold);
+
+    text-decoration: none;
+    &__text {
+        margin: 0;
+        text-align: center;
+        color: $white-color;
+        font-size: 28px;
+
+        span {
+            font-size: 22px;
+        }
+    }
+}
+// COMMON \\
+//TOPBAR
+.sidebar-topbar {
+    @include dmsans($fw-bold);
+    font-size: 14px;
+
+    &__wrapper {
+        @include list-none;
+    }
+
+    &__item {
+
+        & + & {
+            padding-top: $base * 5;
+        }
+
+        &:hover {
+            .sidebar-btn__selector {
+                display: block;
+            }
+            .sidebar-btn__icon {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    &__btn {
+        text-decoration: none;
+        color: #d3d3fd;
+        height: 32px;
+    }
+}
+// TOPBAR \\
+//BTNS
+.sidebar-btn {
+    display: flex;
+    align-items: center;
+
+    &__selector {
+        display: none;
+    }
+
+    &__icon {
+        margin-right: $base * 4;
+        margin-left: $base*7;
+    }
+
+    &__label {
+        min-width: $base * 34;
+    }
+
+    &__arrow {
+        margin-left: $base * 2;
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid $sidebar-primary-color;
+        border-radius: 20px;
+    }
+
+    &__counter {
+        width: 11px;
+        height: $base*4;
+        line-height: $base*4;
+        padding-left:6px;
+        font-size: 8px;
+        background-color: #de350b;
+        border-radius: 10px;
+    }
+}
+// BTNS \\
+// TEAMS \\
+
+.sidebar-teams {
+    @include dmsans($fw-bold);
+    &__header {
+        color: $sidebar-primary-color;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 12px;
+        margin-left: $base * 7;
+        margin-top: $base * 13;
+        margin-bottom: $base * 5;
+    }
+
+    &__btns {
+        @include list-none;
+        font-size: 14px;
+    }
+}
+
+// TEAMS \\
+// OFFER
+
+.sidebar-offer {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: $base * 15;
+
+    &__arrow-btn {
+        position: relative;
+        display: block;
+        width: $base * 12;
+        height: $base * 12;
+        background-color: $white-color;
+        border-radius: 15px;
+        margin-bottom: $base * 6;
+
+        .arrow-up {
+            position: relative;
+            left: 23px;
+            top: 13px;
+            width: 2px;
+            height: 22px;
+            background-color: $sidebar-secondary-color;
+            display: block;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 6px;
+                right:2px;
+                background-color: $sidebar-secondary-color;
+                transform: rotate(45deg);
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 6px;
+                left:2px;
+                background-color: $sidebar-secondary-color;
+                transform: rotate(-45deg);
+            }
+        }
+        &:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+    }
+
+    &__text {
+
+        margin: 0;
+        padding: 0;
+        color: $white-color;
+        font-size: 16px;
+        width: $base * 38;
+        height: $base * 11;
+        margin-bottom: $base * 6;
+        @include dmsans($fw-regular);
+
+        span {
+            @include dmsans($fw-bold);
+        }
+    }
+
+    &__upgrade-btn {
+        @include dmsans($fw-bold);
+
+        width: $base*37;
+        height: $base*10;
+        background-color: $white-color;
+        font-size: 12px;
+        color: $sidebar-secondary-color;
+        border-radius: 16px;
+        text-decoration: none;
+        line-height: $base*10;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+    }
+}

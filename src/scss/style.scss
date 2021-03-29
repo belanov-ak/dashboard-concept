@@ -3,3 +3,13 @@
 @import 'mixins';
 @import 'variables';
 @import 'functions';
+
+//components
+@import 'components/sidebar';
+
+//COMMON //
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+//!COMMON //
